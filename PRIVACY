@@ -1,0 +1,14 @@
+   # QR Drop privacy policy
+
+   QR Drop transfers files directly between your phone and your computer.
+   Files never pass through or are stored on any server.
+
+   The QR Drop server only helps the two devices find each other. It briefly
+   handles a random one-time room code and connection setup messages, and uses
+   your IP address only to limit abuse. Nothing is logged for tracking, no
+   analytics are used, and no data is sold or shared.
+
+   The extension stores only your settings (server address and preferences)
+   in your browser's sync storage.
+
+   Contact: your-email@example.com
