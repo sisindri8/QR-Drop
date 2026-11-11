@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>QR Drop</title>
+<style>
+  body{width:320px;margin:0;padding:16px;background:#14181f;color:#e5e7eb;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  h1{font-size:15px;margin:0 0 12px;color:#d1fae5}
+  label{display:block;font-size:12px;color:#9ca3af;margin:10px 0 4px}
+  input[type=text]{width:100%;padding:8px;border-radius:8px;border:1px solid #2b3340;background:#0f1216;color:#e5e7eb;box-sizing:border-box}
+  .chk{display:flex;gap:8px;align-items:center;margin-top:12px;color:#e5e7eb;font-size:13px}
+  button{margin-top:12px;width:100%;border:0;border-radius:8px;padding:9px;font-size:13px;font-weight:600;cursor:pointer;background:#10b981;color:#052e22}
+  button.ghost{background:#252b36;color:#e5e7eb}
+  #msg{margin-top:8px;min-height:16px;font-size:12px;color:#9ca3af}
+  #msg.ok{color:#34d399}#msg.err{color:#f87171}
+  p.hint{font-size:11.5px;color:#6b7280;margin:10px 0 0;line-height:1.45}
+</style></head><body>
+  <h1>QR Drop</h1>
+  <button id="open">Send a file to my phone →</button>
+  <label for="server">Your QR Drop server</label>
+  <input id="server" type="text" placeholder="https://your-app.onrender.com" spellcheck="false">
+  <label class="chk"><input id="confirm" type="checkbox"> Ask before accepting files from phone</label>
+  <label class="chk"><input id="pickerHook" type="checkbox"> Offer phone upload on sites that use the native file-picker API</label>
+  <button id="save" class="ghost">Save &amp; test connection</button>
+  <div id="msg"></div>
+  <p class="hint">On any site, click the green badge next to an upload field, or right-click an upload area → “QR Drop: receive a file from my phone here”.</p>
+  <script src="lib/config.js"></script>
+  <script src="popup.js"></script>
+</body></html>

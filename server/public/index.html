@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1216">
+<title>QR Drop</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<main class="wrap">
+  <h1>QR Drop</h1>
+  <p id="status" class="status">Connecting…</p>
+
+  <div id="actions" hidden>
+    <label class="pick" for="fileInput">
+      <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M12 4L7 9M12 4l5 5"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+      <span id="pickLabel">Choose file(s) to send</span>
+    </label>
+    <input id="fileInput" type="file" hidden>
+    <label id="camBtn" class="cam" for="camInput">📷 Take a photo</label>
+    <input id="camInput" type="file" accept="image/*" capture="environment" hidden>
+  </div>
+
+  <div id="barWrap" class="barwrap"><div id="bar" class="bar"></div></div>
+  <p id="info" class="info"></p>
+  <div id="received" class="received"></div>
+  <p id="debug" class="debug"></p>
+</main>
+<script src="session.js"></script>
+<script src="app.js"></script>
+</body></html>

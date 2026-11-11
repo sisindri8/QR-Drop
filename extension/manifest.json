@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "QR Drop – Phone ⇄ Desktop file transfer",
+  "version": "4.0.0",
+  "description": "Fill any website's file-upload field from your phone (or send files to your phone) by scanning a QR code. Direct peer-to-peer, no cloud storage.",
+  "minimum_chrome_version": "116",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "permissions": ["storage", "contextMenus"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "QR Drop" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/config.js", "lib/qrcode.min.js", "lib/session.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}

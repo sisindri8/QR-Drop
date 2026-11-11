@@ -1,0 +1,10 @@
+{
+  "name": "qr-drop-server",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Signaling + phone page host for QR Drop (files never pass through this server)",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}

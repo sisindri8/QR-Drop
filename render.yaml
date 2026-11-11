@@ -1,0 +1,15 @@
+# One-click deploy on Render: New + > Blueprint > pick this repo.
+services:
+  - type: web
+    name: qr-drop
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: METERED_DOMAIN     # optional: TURN relay for phone-on-mobile-data (see README)
+        sync: false
+      - key: METERED_API_KEY
+        sync: false
